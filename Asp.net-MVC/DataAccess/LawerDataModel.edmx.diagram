@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4cd2efbafb70474f8859d024929edc5e" Name="Diagram1">
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Client_Purpose" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Employee_Register" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Family_Costing" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Individual_Client" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Office_Costing" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Other_Information" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Payment_Client" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.School_Costing" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.School_Income" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lawer_DatabaseModel.Work_Shedule" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="Lawer_DatabaseModel.FK_Client_Purpose_Individual_Client1" ManuallyRouted="false" />
+        <AssociationConnector Association="Lawer_DatabaseModel.FK_Payment_Client_Individual_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="Lawer_DatabaseModel.FK_Work_Shedule_Individual_Client" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

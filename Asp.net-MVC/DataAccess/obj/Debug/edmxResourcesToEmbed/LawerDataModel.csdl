@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Lawer_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Client_Purpose">
+    <Key>
+      <PropertyRef Name="Purpose_ID" />
+    </Key>
+    <Property Name="Purpose_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Client_ID" Type="Int32" />
+    <NavigationProperty Name="Individual_Client" Relationship="Self.FK_Client_Purpose_Individual_Client1" FromRole="Client_Purpose" ToRole="Individual_Client" />
+  </EntityType>
+  <EntityType Name="Employee_Register">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Phone_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Joinining_Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Family_Costing">
+    <Key>
+      <PropertyRef Name="Family_CostID" />
+    </Key>
+    <Property Name="Family_CostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Cost_Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Individual_Client">
+    <Key>
+      <PropertyRef Name="Client_ID" />
+    </Key>
+    <Property Name="Client_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="National_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Father_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mother_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Present_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Permanent_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date_of_Birth" Type="DateTime" Precision="0" />
+    <Property Name="Tin_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fact_of_Case" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Phone_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Auto_Generate_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tax_of_year" Type="DateTime" Precision="0" />
+    <Property Name="Bank_of_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bank_Account_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type_of_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Period_of_AccountDate" Type="DateTime" Precision="0" />
+    <Property Name="Information_of_SavingAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Other_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Import_Export_PaperImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Car_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Assets_Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount_of_Assets" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price_of_Assets" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount_of_HomeArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Floor_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Renter_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Renter_Contract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Self_Living" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Flat_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Invest_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Shareholding_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BOI_Account" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Partner_Details" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Credit_Card_Details" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Client_Purpose" Relationship="Self.FK_Client_Purpose_Individual_Client1" FromRole="Individual_Client" ToRole="Client_Purpose" />
+    <NavigationProperty Name="Payment_Client" Relationship="Self.FK_Payment_Client_Individual_Client" FromRole="Individual_Client" ToRole="Payment_Client" />
+    <NavigationProperty Name="Work_Shedule" Relationship="Self.FK_Work_Shedule_Individual_Client" FromRole="Individual_Client" ToRole="Work_Shedule" />
+  </EntityType>
+  <EntityType Name="Office_Costing">
+    <Key>
+      <PropertyRef Name="Office_CostID" />
+    </Key>
+    <Property Name="Office_CostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Cost_Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Other_Information">
+    <Key>
+      <PropertyRef Name="Information_ID" />
+    </Key>
+    <Property Name="Information_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Payment_Client">
+    <Key>
+      <PropertyRef Name="Payment_ID" />
+    </Key>
+    <Property Name="Payment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Client_ID" Type="Int32" />
+    <Property Name="Deal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Due_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Individual_Client" Relationship="Self.FK_Payment_Client_Individual_Client" FromRole="Payment_Client" ToRole="Individual_Client" />
+  </EntityType>
+  <EntityType Name="School_Costing">
+    <Key>
+      <PropertyRef Name="School_CostingID" />
+    </Key>
+    <Property Name="School_CostingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="School_Income">
+    <Key>
+      <PropertyRef Name="School_IncomeID" />
+    </Key>
+    <Property Name="School_IncomeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Income" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Work_Shedule">
+    <Key>
+      <PropertyRef Name="Shedule_ID" />
+    </Key>
+    <Property Name="Shedule_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Operator_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Cost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Client_ID" Type="Int32" />
+    <NavigationProperty Name="Individual_Client" Relationship="Self.FK_Work_Shedule_Individual_Client" FromRole="Work_Shedule" ToRole="Individual_Client" />
+  </EntityType>
+  <Association Name="FK_Client_Purpose_Individual_Client1">
+    <End Role="Individual_Client" Type="Self.Individual_Client" Multiplicity="0..1" />
+    <End Role="Client_Purpose" Type="Self.Client_Purpose" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual_Client">
+        <PropertyRef Name="Client_ID" />
+      </Principal>
+      <Dependent Role="Client_Purpose">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Client_Individual_Client">
+    <End Role="Individual_Client" Type="Self.Individual_Client" Multiplicity="0..1" />
+    <End Role="Payment_Client" Type="Self.Payment_Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual_Client">
+        <PropertyRef Name="Client_ID" />
+      </Principal>
+      <Dependent Role="Payment_Client">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Work_Shedule_Individual_Client">
+    <End Role="Individual_Client" Type="Self.Individual_Client" Multiplicity="0..1" />
+    <End Role="Work_Shedule" Type="Self.Work_Shedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual_Client">
+        <PropertyRef Name="Client_ID" />
+      </Principal>
+      <Dependent Role="Work_Shedule">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Lawer_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Client_Purpose" EntityType="Self.Client_Purpose" />
+    <EntitySet Name="Employee_Register" EntityType="Self.Employee_Register" />
+    <EntitySet Name="Family_Costing" EntityType="Self.Family_Costing" />
+    <EntitySet Name="Individual_Client" EntityType="Self.Individual_Client" />
+    <EntitySet Name="Office_Costing" EntityType="Self.Office_Costing" />
+    <EntitySet Name="Other_Information" EntityType="Self.Other_Information" />
+    <EntitySet Name="Payment_Client" EntityType="Self.Payment_Client" />
+    <EntitySet Name="School_Costing" EntityType="Self.School_Costing" />
+    <EntitySet Name="School_Income" EntityType="Self.School_Income" />
+    <EntitySet Name="Work_Shedule" EntityType="Self.Work_Shedule" />
+    <AssociationSet Name="FK_Client_Purpose_Individual_Client1" Association="Self.FK_Client_Purpose_Individual_Client1">
+      <End Role="Individual_Client" EntitySet="Individual_Client" />
+      <End Role="Client_Purpose" EntitySet="Client_Purpose" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Client_Individual_Client" Association="Self.FK_Payment_Client_Individual_Client">
+      <End Role="Individual_Client" EntitySet="Individual_Client" />
+      <End Role="Payment_Client" EntitySet="Payment_Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Work_Shedule_Individual_Client" Association="Self.FK_Work_Shedule_Individual_Client">
+      <End Role="Individual_Client" EntitySet="Individual_Client" />
+      <End Role="Work_Shedule" EntitySet="Work_Shedule" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

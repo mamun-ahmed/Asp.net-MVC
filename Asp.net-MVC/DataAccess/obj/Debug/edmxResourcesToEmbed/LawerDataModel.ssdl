@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Lawer_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client_Purpose">
+    <Key>
+      <PropertyRef Name="Purpose_ID" />
+    </Key>
+    <Property Name="Purpose_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Reason" Type="text" />
+    <Property Name="Client_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Employee_Register">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Photo" Type="image" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Address" Type="text" />
+    <Property Name="Phone_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Joinining_Date" Type="date" />
+  </EntityType>
+  <EntityType Name="Family_Costing">
+    <Key>
+      <PropertyRef Name="Family_CostID" />
+    </Key>
+    <Property Name="Family_CostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Cost_Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reason" Type="text" />
+  </EntityType>
+  <EntityType Name="Individual_Client">
+    <Key>
+      <PropertyRef Name="Client_ID" />
+    </Key>
+    <Property Name="Client_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="image" />
+    <Property Name="National_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Father_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mother_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Present_Address" Type="text" />
+    <Property Name="Permanent_Address" Type="text" />
+    <Property Name="Date_of_Birth" Type="date" />
+    <Property Name="Tin_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Fact_of_Case" Type="text" />
+    <Property Name="Phone_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Auto_Generate_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tax_of_year" Type="date" />
+    <Property Name="Bank_of_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bank_Account_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type_of_Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="Period_of_AccountDate" Type="date" />
+    <Property Name="Information_of_SavingAccount" Type="text" />
+    <Property Name="Other_Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="Import_Export_PaperImage" Type="image" />
+    <Property Name="Car_Details" Type="nvarchar(max)" />
+    <Property Name="Assets_Class" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount_of_Assets" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price_of_Assets" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount_of_HomeArea" Type="nvarchar" MaxLength="50" />
+    <Property Name="Floor_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Renter_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Renter_Contract" Type="nvarchar" MaxLength="50" />
+    <Property Name="Self_Living" Type="nvarchar" MaxLength="50" />
+    <Property Name="Flat_Details" Type="text" />
+    <Property Name="Invest_Details" Type="text" />
+    <Property Name="Shareholding_Details" Type="text" />
+    <Property Name="BOI_Account" Type="nvarchar(max)" />
+    <Property Name="Partner_Details" Type="nvarchar" MaxLength="50" />
+    <Property Name="Credit_Card_Details" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Office_Costing">
+    <Key>
+      <PropertyRef Name="Office_CostID" />
+    </Key>
+    <Property Name="Office_CostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Cost_Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reason" Type="text" />
+  </EntityType>
+  <EntityType Name="Other_Information">
+    <Key>
+      <PropertyRef Name="Information_ID" />
+    </Key>
+    <Property Name="Information_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Reason" Type="text" />
+  </EntityType>
+  <EntityType Name="Payment_Client">
+    <Key>
+      <PropertyRef Name="Payment_ID" />
+    </Key>
+    <Property Name="Payment_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Client_ID" Type="int" />
+    <Property Name="Deal" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pay" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reason" Type="text" />
+    <Property Name="Due_Payment" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="School_Costing">
+    <Key>
+      <PropertyRef Name="School_CostingID" />
+    </Key>
+    <Property Name="School_CostingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reason" Type="text" />
+  </EntityType>
+  <EntityType Name="School_Income">
+    <Key>
+      <PropertyRef Name="School_IncomeID" />
+    </Key>
+    <Property Name="School_IncomeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Income" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reason" Type="text" />
+  </EntityType>
+  <EntityType Name="Work_Shedule">
+    <Key>
+      <PropertyRef Name="Shedule_ID" />
+    </Key>
+    <Property Name="Shedule_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Operator_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reason" Type="text" />
+    <Property Name="Cost" Type="nvarchar" MaxLength="50" />
+    <Property Name="Client_ID" Type="int" />
+  </EntityType>
+  <Association Name="FK_Client_Purpose_Individual_Client1">
+    <End Role="Individual_Client" Type="Self.Individual_Client" Multiplicity="0..1" />
+    <End Role="Client_Purpose" Type="Self.Client_Purpose" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual_Client">
+        <PropertyRef Name="Client_ID" />
+      </Principal>
+      <Dependent Role="Client_Purpose">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Client_Individual_Client">
+    <End Role="Individual_Client" Type="Self.Individual_Client" Multiplicity="0..1" />
+    <End Role="Payment_Client" Type="Self.Payment_Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual_Client">
+        <PropertyRef Name="Client_ID" />
+      </Principal>
+      <Dependent Role="Payment_Client">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Work_Shedule_Individual_Client">
+    <End Role="Individual_Client" Type="Self.Individual_Client" Multiplicity="0..1" />
+    <End Role="Work_Shedule" Type="Self.Work_Shedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual_Client">
+        <PropertyRef Name="Client_ID" />
+      </Principal>
+      <Dependent Role="Work_Shedule">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Lawer_DatabaseModelStoreContainer">
+    <EntitySet Name="Client_Purpose" EntityType="Self.Client_Purpose" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Register" EntityType="Self.Employee_Register" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Family_Costing" EntityType="Self.Family_Costing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Individual_Client" EntityType="Self.Individual_Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Office_Costing" EntityType="Self.Office_Costing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Other_Information" EntityType="Self.Other_Information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment_Client" EntityType="Self.Payment_Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="School_Costing" EntityType="Self.School_Costing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="School_Income" EntityType="Self.School_Income" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Work_Shedule" EntityType="Self.Work_Shedule" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Client_Purpose_Individual_Client1" Association="Self.FK_Client_Purpose_Individual_Client1">
+      <End Role="Individual_Client" EntitySet="Individual_Client" />
+      <End Role="Client_Purpose" EntitySet="Client_Purpose" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Client_Individual_Client" Association="Self.FK_Payment_Client_Individual_Client">
+      <End Role="Individual_Client" EntitySet="Individual_Client" />
+      <End Role="Payment_Client" EntitySet="Payment_Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Work_Shedule_Individual_Client" Association="Self.FK_Work_Shedule_Individual_Client">
+      <End Role="Individual_Client" EntitySet="Individual_Client" />
+      <End Role="Work_Shedule" EntitySet="Work_Shedule" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

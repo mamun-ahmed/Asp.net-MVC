@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Lawer_DatabaseModelStoreContainer" CdmEntityContainer="Lawer_DatabaseEntities">
+    <EntitySetMapping Name="Client_Purpose">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Client_Purpose">
+        <MappingFragment StoreEntitySet="Client_Purpose">
+          <ScalarProperty Name="Purpose_ID" ColumnName="Purpose_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Register">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Employee_Register">
+        <MappingFragment StoreEntitySet="Employee_Register">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Joinining_Date" ColumnName="Joinining_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Family_Costing">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Family_Costing">
+        <MappingFragment StoreEntitySet="Family_Costing">
+          <ScalarProperty Name="Family_CostID" ColumnName="Family_CostID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Cost_Amount" ColumnName="Cost_Amount" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Individual_Client">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Individual_Client">
+        <MappingFragment StoreEntitySet="Individual_Client">
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="National_ID" ColumnName="National_ID" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="Present_Address" ColumnName="Present_Address" />
+          <ScalarProperty Name="Permanent_Address" ColumnName="Permanent_Address" />
+          <ScalarProperty Name="Date_of_Birth" ColumnName="Date_of_Birth" />
+          <ScalarProperty Name="Tin_Number" ColumnName="Tin_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fact_of_Case" ColumnName="Fact_of_Case" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Reference_Name" ColumnName="Reference_Name" />
+          <ScalarProperty Name="Auto_Generate_Name" ColumnName="Auto_Generate_Name" />
+          <ScalarProperty Name="Tax_of_year" ColumnName="Tax_of_year" />
+          <ScalarProperty Name="Bank_of_Name" ColumnName="Bank_of_Name" />
+          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank_Account_Number" />
+          <ScalarProperty Name="Type_of_Account" ColumnName="Type_of_Account" />
+          <ScalarProperty Name="Period_of_AccountDate" ColumnName="Period_of_AccountDate" />
+          <ScalarProperty Name="Information_of_SavingAccount" ColumnName="Information_of_SavingAccount" />
+          <ScalarProperty Name="Other_Account" ColumnName="Other_Account" />
+          <ScalarProperty Name="Import_Export_PaperImage" ColumnName="Import_Export_PaperImage" />
+          <ScalarProperty Name="Car_Details" ColumnName="Car_Details" />
+          <ScalarProperty Name="Assets_Class" ColumnName="Assets_Class" />
+          <ScalarProperty Name="Amount_of_Assets" ColumnName="Amount_of_Assets" />
+          <ScalarProperty Name="Price_of_Assets" ColumnName="Price_of_Assets" />
+          <ScalarProperty Name="Amount_of_HomeArea" ColumnName="Amount_of_HomeArea" />
+          <ScalarProperty Name="Floor_Number" ColumnName="Floor_Number" />
+          <ScalarProperty Name="Renter_Number" ColumnName="Renter_Number" />
+          <ScalarProperty Name="Renter_Contract" ColumnName="Renter_Contract" />
+          <ScalarProperty Name="Self_Living" ColumnName="Self_Living" />
+          <ScalarProperty Name="Flat_Details" ColumnName="Flat_Details" />
+          <ScalarProperty Name="Invest_Details" ColumnName="Invest_Details" />
+          <ScalarProperty Name="Shareholding_Details" ColumnName="Shareholding_Details" />
+          <ScalarProperty Name="BOI_Account" ColumnName="BOI_Account" />
+          <ScalarProperty Name="Partner_Details" ColumnName="Partner_Details" />
+          <ScalarProperty Name="Credit_Card_Details" ColumnName="Credit_Card_Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Office_Costing">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Office_Costing">
+        <MappingFragment StoreEntitySet="Office_Costing">
+          <ScalarProperty Name="Office_CostID" ColumnName="Office_CostID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Cost_Amount" ColumnName="Cost_Amount" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Other_Information">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Other_Information">
+        <MappingFragment StoreEntitySet="Other_Information">
+          <ScalarProperty Name="Information_ID" ColumnName="Information_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment_Client">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Payment_Client">
+        <MappingFragment StoreEntitySet="Payment_Client">
+          <ScalarProperty Name="Payment_ID" ColumnName="Payment_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="Deal" ColumnName="Deal" />
+          <ScalarProperty Name="Pay" ColumnName="Pay" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Due_Payment" ColumnName="Due_Payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="School_Costing">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.School_Costing">
+        <MappingFragment StoreEntitySet="School_Costing">
+          <ScalarProperty Name="School_CostingID" ColumnName="School_CostingID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="School_Income">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.School_Income">
+        <MappingFragment StoreEntitySet="School_Income">
+          <ScalarProperty Name="School_IncomeID" ColumnName="School_IncomeID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Income" ColumnName="Income" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Work_Shedule">
+      <EntityTypeMapping TypeName="Lawer_DatabaseModel.Work_Shedule">
+        <MappingFragment StoreEntitySet="Work_Shedule">
+          <ScalarProperty Name="Shedule_ID" ColumnName="Shedule_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Operator_Name" ColumnName="Operator_Name" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
